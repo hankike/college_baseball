@@ -1,3 +1,5 @@
+# This does not work. I am having serious issues with baseballr and cannot get anything with it to work lately
+
 library(baseballr)
 library(tidyverse)
 library(rvest)
