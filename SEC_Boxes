@@ -21,7 +21,7 @@ Texas  = ncaa_scrape(team_id = 703, year = 2026, type = "batting")
 Vanderbilt = ncaa_scrape(team_id = 736, year = 2026, type = "batting")
 
 # Combine
-SEC = rbind(Alabama, Arkansas, Auburn, Florida, Georgia, Kentucky, LSU, Miss_State, Ole_Miss, Missouri, South_Carolina,Tennessee, TAMU, Vanderbilt)
+SEC = rbind(Alabama, Arkansas, Auburn, Florida, Georgia, Kentucky, LSU, Miss_State, Ole_Miss, Oklahoma, Missouri, South_Carolina, Tennessee, TAMU, Texas, Vanderbilt)
 
 
 SEC = SEC %>% filter(is.na(BA)==FALSE)
