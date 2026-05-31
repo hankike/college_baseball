@@ -1,0 +1,28 @@
+library(baseballr)
+library(tidyverse)
+library(rvest)
+
+# All SEC Teams
+Alabama = ncaa_scrape(team_id = 8, year = 2026, type = "batting")
+Arkansas = ncaa_scrape(team_id = 31, year = 2026, type = "batting")
+Auburn = ncaa_scrape(team_id = 37, year = 2026, type = "batting")
+Florida = ncaa_scrape(team_id = 235, year = 2026, type = "batting")
+Georgia = ncaa_scrape(team_id = 257, year = 2026, type = "batting")
+Kentucky = ncaa_scrape(team_id = 334, year = 2026, type = "batting")
+LSU = ncaa_scrape(team_id = 365, year = 2026, type = "batting")
+Miss_State = ncaa_scrape(team_id = 430, year = 2026, type = "batting")
+Ole_Miss = ncaa_scrape(team_id = 433, year = 2026, type = "batting")
+Oklahoma = ncaa_scrape(team_id = , year = 2026, type = "batting")
+Missouri = ncaa_scrape(team_id = 434, year = 2026, type = "batting")
+South_Carolina = ncaa_scrape(team_id = 648, year = 2026, type = "batting")
+TAMU = ncaa_scrape(team_id = 697, year = 2026, type = "batting")
+Tennessee = ncaa_scrape(team_id = 694, year = 2026, type = "batting")
+Texas  = ncaa_scrape(team_id = , year = 2026, type = "batting")
+Vanderbilt = ncaa_scrape(team_id = 736, year = 2026, type = "batting")
+
+# Combine
+SEC = rbind(Alabama, Arkansas, Auburn, Florida, Georgia, Kentucky, LSU, Miss_State, Ole_Miss, Missouri, South_Carolina,Tennessee, TAMU, Vanderbilt)
+
+
+SEC = SEC %>% filter(is.na(BA)==FALSE)
+SEC = data.frame(SEC)
